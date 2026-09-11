@@ -1,0 +1,28 @@
+{
+  "name": "qbtcp-relay-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "QBTCP Internet relay: a tournament-owned Cloudflare Worker and SQLite Durable Object that durably receives scorer traffic while Director is away",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@qbsheet/cloudflare-runtime-core": "file:../../packages/cloudflare-runtime-core"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.22.0",
+    "@cloudflare/workers-types": "^5.20260831.1",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.0.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "workerd@1.20260815.1": true,
+    "workerd@1.20260831.1": true
+  }
+}
